@@ -18,18 +18,17 @@ with open(current_folder_path + "/requirements.txt", 'r') as file:
 setup(
     name="mytransformer",
     version="0.0.1",
-    description="Implementations of transformers from scratch with Jax, TensorFlow and PyTorch.",
+    python_requires=">=3.10",
+    install_requires=requirements,
+    packages=find_packages(),
+    description="Implementations of transformers with Jax, PyTorch and TensorFlow .",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/AnthonyKobanda/mytransformer",
     author="Anthony Kobanda",
     author_email="anthony.kobanda@gmail.com",
-    keywords="sample, setuptools, development",
-    package_dir={"": "src"},
-    packages=find_packages(where="src"),
-    python_requires=">=3.10",
-    install_requires=requirements,
     project_urls={
         "Issues": "https://github.com/AnthonyKobanda/mytransformer/issues",
-        "Source": "https://github.com/AnthonyKobanda/mytransformer"},
+        "Source": "https://github.com/AnthonyKobanda/mytransformer"
+    },
 )
