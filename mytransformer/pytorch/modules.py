@@ -91,9 +91,7 @@ class FeedForwardNetwork(nn.Module):
         self.layer_2 = nn.Linear(d_ff,d_model)
     
 
-    def forward(
-        self,
-        x:torch.Tensor) -> torch.Tensor:
+    def forward(self,x:torch.Tensor) -> torch.Tensor:
         """
         `x.shape` = [`batch_size`,`q_len`,`d_model`]
         """

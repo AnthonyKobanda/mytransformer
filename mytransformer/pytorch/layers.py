@@ -65,7 +65,7 @@ class DecoderLayer(nn.Module):
         self.layer_norm_3 = nn.LayerNorm(d_model)
 
 
-    def forward(self,x:torch.Tensor,Q_encoder:torch.Tensor,K_encoder:torch.Tensor):
+    def forward(self,x:torch.Tensor,Q_encoder:torch.Tensor,K_encoder:torch.Tensor) -> torch.Tensor:
         mask = torch.tril(torch.ones((x.shape[1],x.shape[1])))
         o1 = self.multi_head_attention_1(x,x,x,mask)
         o1 = self.dropout_1(o1)

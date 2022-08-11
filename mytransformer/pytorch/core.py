@@ -1,4 +1,3 @@
-from turtle import forward
 import torch
 import torch.nn as nn
 
@@ -26,9 +25,7 @@ class Transformer(nn.Module):
         self.linear_layer = nn.Linear(d_model,d_output)
 
     
-    def forward(
-        self,
-        x:torch.Tensor) -> torch.Tensor:
+    def forward(self,x:torch.Tensor) -> torch.Tensor:
 
         o1 = x
         for encoder in self.encoders:
